@@ -1,29 +1,28 @@
-let age = 0;
-const myText = document.getElementById("ageInput");
+const myCheckBox = document.getElementById("myCheckBox");
+const visaBtn = document.getElementById("visaBtn");
+const mastercardBtn = document.getElementById("mastercardBtn");
+const paypalBtn = document.getElementById("paypalBtn");
 const mySubmit = document.getElementById("submitButton");
-const myResult = document.getElementById("resultMessage");
+const subResult = document.getElementById("subResult");
+const paymentResult = document.getElementById("paymentResult");
 
-
-mySubmit.addEventListener("click", function() {
-    age = myText.value;
-    // Convert the input to a number
-    age = Number(age);
-
-    if (isNaN(age)) {
-      myResult.textContent = `Please enter a valid number for your age.`;
-      myText.value = ""; // Clear the input field
-      myText.focus(); // Set focus back to the input field
-      return;
-    }
-    if (age >= 100) {
-      myResult.textContent = `You are TOO OLD to enter this site.`;
-    } else if (age >= 18) {
-        myResult.textContent = `You are ${age} years old. You can enter this site.`;
-    } else if (age == 0) {
-        myResult.textContent = `You can't enter. You were just born.`;
-    } else if (age < 0) {
-        myResult.textContent = `You can't enter. You are not born yet.`;
+mySubmit.onclick = function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+    
+    if (myCheckBox.checked) {
+        subResult.textContent = `You are subscribed`;
     } else {
-        myResult.textContent = `You must be 18+ to enter this site.`;
+        subResult.textContent = `You are NOT subscribed`;
     }
-});
+
+    if (visaBtn.checked) {
+        paymentResult.textContent = `You are paying with Visa`;
+    } else if (mastercardBtn.checked) {
+        paymentResult.textContent = `You are paying with MasterCard`;
+    } else if (paypalBtn.checked) {
+        paymentResult.textContent = `You are paying with PayPal`;
+    } else {
+        paymentResult.textContent = `You must select a payment method`;
+    }
+};

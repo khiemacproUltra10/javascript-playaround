@@ -9,10 +9,23 @@
 </head>
 <body>
     <h1 id="promptMessage">Welcome</h1>
-    <label for="ageInput">Enter your age</label>
-    <input type="number" id="ageInput" placeholder="Enter your age">
-    <button id="submitButton">Submit</button>
-    <p id="resultMessage"></p>
+    
+    <div class="container">
+        <input type="checkbox" id="myCheckBox">
+        <label for="myCheckBox">Subscribe</label><br><br>
+        
+        <input type="radio" id="visaBtn" name="card">
+        <label for="visaBtn">Visa</label><br>
+        <input type="radio" id="mastercardBtn" name="card">
+        <label for="mastercardBtn">MasterCard</label><br>
+        <input type="radio" id="paypalBtn" name="card">
+        <label for="paypalBtn">PayPal</label><br><br>
+
+        <button id="submitButton" type="submit">Submit</button>
+
+        <p id="subResult"></p>
+        <p id="paymentResult"></p>
+    </div>
 
     <script src="script.js"></script>
 </body>

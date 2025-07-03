@@ -4,27 +4,8 @@ body {
     text-align: center;
 }
 
-#random-btn {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-#random-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-#promptMessage {
-    color: #333;
-    font-size: 2rem;
-    margin-top: 20px;
+#submitButton {
+    font-size: 1.5rem;
 }
 
 
