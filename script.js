@@ -10,10 +10,10 @@ mySubmit.addEventListener("click", function() {
     age = Number(age);
 
     if (isNaN(age)) {
-        myResult.textContent = `Please enter a valid number for your age.`;
-        myText.value = ""; // Clear the input field
-        myText.focus(); // Set focus back to the input field
-        return;
+      myResult.textContent = `Please enter a valid number for your age.`;
+      myText.value = ""; // Clear the input field
+      myText.focus(); // Set focus back to the input field
+      return;
     }
     if (age >= 100) {
       myResult.textContent = `You are TOO OLD to enter this site.`;
